@@ -48,7 +48,7 @@ install -Dpm 0644 ./rclone.1 %{buildroot}%{_mandir}/man1/rclone.1
 
 %if %{with check}
 %check
-%gocheck -d backend/crypt -d backend/ftp -d backend/hdfs -d backend/seafile -d backend/sftp
+%gocheck -d backend/crypt -d backend/ftp -d backend/hdfs -d backend/seafile -d backend/sftp -d backend/sia
 %endif
 
 %files
