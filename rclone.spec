@@ -22,6 +22,8 @@ License:        MIT
 URL:            https://rclone.org/
 Source0:        %{gosource}
 
+BuildRequires:  fuse
+
 %description
 %{common_description}
 
@@ -48,7 +50,7 @@ install -Dpm 0644 ./rclone.1 %{buildroot}%{_mandir}/man1/rclone.1
 
 %if %{with check}
 %check
-%gocheck -d backend/crypt -d backend/ftp -d backend/hdfs -d backend/seafile -d backend/sftp -d backend/sia -d backend/swift -d backend/webdav
+%gocheck -d backend/crypt -d backend/ftp -d backend/hdfs -d backend/seafile -d backend/sftp -d backend/sia -d backend/swift -d backend/webdav -d cmd/selfupdate
 %endif
 
 %files
