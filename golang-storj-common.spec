@@ -17,7 +17,7 @@ Storj common packages.}
 
 Name:           %{goname}
 Version:        0
-Release:        %autorelease -p
+Release:        %autorelease -p -b 10
 Summary:        Storj common packages
 
 License:        ISC and MIT
