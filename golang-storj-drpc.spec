@@ -16,7 +16,7 @@ Drpc is a lightweight, drop-in replacement for gRPC.}
 %global godocs          README.md
 
 Name:           %{goname}
-Release:        %autorelease
+Release:        %autorelease -b 10
 Summary:        Drpc is a lightweight, drop-in replacement for gRPC
 
 License:        MIT
