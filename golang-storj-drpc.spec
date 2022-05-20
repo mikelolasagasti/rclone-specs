@@ -32,9 +32,6 @@ Source0:        %{gosource}
 %prep
 %goprep
 rm -rf internal/grpccompat
-sed -i "s|\"github.com/zeebo/errs\"||" $(find . -name "*.go")
-sed -i "s|\"github.com/zeebo/assert\"||" $(find . -name "*.go")
-sed -i "s|\"github.com/zeebo/hmux\"||" $(find . -name "*.go")
 
 %generate_buildrequires
 %go_generate_buildrequires
