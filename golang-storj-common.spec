@@ -5,7 +5,7 @@
 # https://github.com/storj/common
 %global goipath         storj.io/common
 %global forgeurl        https://github.com/storj/common
-%global commit          ec9c16f58d50effc12f42543990bdd69a332d407
+%global commit          a5cb7172d6bf45b4672142fea3ee63756b13b438
 
 %gometa
 
