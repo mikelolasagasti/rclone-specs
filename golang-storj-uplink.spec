@@ -5,7 +5,7 @@
 # https://github.com/storj/uplink
 %global goipath         storj.io/uplink
 %global forgeurl        https://github.com/storj/uplink
-Version:                1.9.0
+Version:                1.8.3
 
 %gometa
 
