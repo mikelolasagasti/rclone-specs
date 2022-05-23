@@ -17,7 +17,7 @@ Storj common packages.}
 
 Name:           %{goname}
 Version:        0
-Release:        %autorelease -p -b 10
+Release:        0.6%{?dist}
 Summary:        Storj common packages
 
 License:        ISC and MIT
@@ -53,4 +53,20 @@ done
 %gopkgfiles
 
 %changelog
-%autochangelog
+* Mon May 23 2022 Mikel Olasagasti Uranga <mikel@olasagasti.info> - 0-0.6
+- Bump to commit a5cb7172d6bf45b4672142fea3ee63756b13b438
+
+* Thu Jan 20 2022 Fedora Release Engineering <releng@fedoraproject.org> - 0-0.5
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_36_Mass_Rebuild
+
+* Thu Jul 22 2021 Fedora Release Engineering <releng@fedoraproject.org> - 0-0.4
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_35_Mass_Rebuild
+
+* Tue Jan 26 2021 Fedora Release Engineering <releng@fedoraproject.org> - 0-0.3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_34_Mass_Rebuild
+
+* Wed Jan 13 22:55:00 CET 2021 Robert-André Mauchin <zebob.m@gmail.com> - 0-0.2.20210113git07a5dc6
+- Bump to commit 07a5dc68dc1cf48965c6d5df6c99eddd02bbaf30
+
+* Fri Sep 18 09:13:18 CEST 2020 Robert-André Mauchin <zebob.m@gmail.com> - 0-0.1.20200918git79b66a3
+- Initial package
