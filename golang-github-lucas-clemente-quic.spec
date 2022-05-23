@@ -4,7 +4,7 @@
 
 # https://github.com/lucas-clemente/quic-go
 %global goipath         github.com/lucas-clemente/quic-go
-Version:                0.27.0
+Version:                0.27.1
 
 %gometa
 
