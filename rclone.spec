@@ -32,9 +32,7 @@ BuildRequires:  fuse
 %prep
 %goprep
 sed -i "s|github.com/putdotio/go-putio/putio|github.com/putdotio/go-putio|" $(find . -name "*.go")
-#sed -i "s|github.com/rclone/ftp|github.com/jlaffaye/ftp|" $(find . -name "*.go")
-#rm -rf backend/storj
-#sed -i "s|	_ \"github.com/rclone/rclone/backend/storj\"||" backend/all/all.go
+
 %generate_buildrequires
 %go_generate_buildrequires
 
@@ -50,6 +48,7 @@ install -Dpm 0644 ./rclone.1 %{buildroot}%{_mandir}/man1/rclone.1
 
 %if %{with check}
 %check
+# Skip checks requiring docker
 %gocheck -d backend/crypt -d backend/ftp -d backend/hdfs -d backend/seafile -d backend/sftp -d backend/sia -d backend/swift -d backend/webdav -d cmd/selfupdate -d cmd/serve/docker -d fs/rc/webgui
 %endif
 
