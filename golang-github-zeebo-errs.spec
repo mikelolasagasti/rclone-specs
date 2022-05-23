@@ -4,6 +4,7 @@
 
 # https://github.com/zeebo/errs
 %global goipath         github.com/zeebo/errs
+Epoch:                  1
 Version:                1.3.0
 
 %gometa
@@ -16,7 +17,7 @@ Errs is a package for making errors friendly and easy.}
 
 Name:           %{goname}
 Release:        %autorelease
-Summary:        Errs is a package for making errors friendly and easy
+Summary:        Package for making errors friendly and easy
 
 License:        MIT
 URL:            %{gourl}
