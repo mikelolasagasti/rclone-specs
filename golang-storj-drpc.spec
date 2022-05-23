@@ -10,14 +10,14 @@ Version:                0.0.30
 %gometa
 
 %global common_description %{expand:
-Drpc is a lightweight, drop-in replacement for gRPC.}
+Lightweight, drop-in replacement for gRPC.}
 
 %global golicenses      LICENSE
 %global godocs          README.md
 
 Name:           %{goname}
-Release:        %autorelease -b 10
-Summary:        Drpc is a lightweight, drop-in replacement for gRPC
+Release:        %autorelease
+Summary:        Lightweight, drop-in replacement for gRPC
 
 License:        MIT
 URL:            %{gourl}
@@ -30,18 +30,33 @@ Source0:        %{gosource}
 
 %prep
 %goprep
+# Integration tests for drpc, adds multiple non packaged dependencies
 rm -rf internal/grpccompat
 
 %generate_buildrequires
 %go_generate_buildrequires
 
+%build
+for cmd in cmd/* ; do
+  %gobuild -o %{gobuilddir}/bin/$(basename $cmd) %{goipath}/$cmd
+done
+
 %install
 %gopkginstall
+install -m 0755 -vd                     %{buildroot}%{_bindir}
+install -m 0755 -vp %{gobuilddir}/bin/* %{buildroot}%{_bindir}/
 
 %if %{with check}
 %check
+# backcompat tests fail with a panic
+# panic: runtime error: invalid memory address or nil pointer dereference
 %gocheck -d internal/backcompat -d internal/backcompat/oldservicedefs
 %endif
+
+%files
+%license LICENSE
+%doc README.md
+%{_bindir}/*
 
 %gopkgfiles
 
