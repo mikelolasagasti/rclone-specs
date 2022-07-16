@@ -49,7 +49,7 @@ install -Dpm 0644 ./rclone.1 %{buildroot}%{_mandir}/man1/rclone.1
 %if %{with check}
 %check
 # Skip checks requiring docker
-%gocheck -d backend/crypt -d backend/ftp -d backend/hdfs -d backend/seafile -d backend/sftp -d backend/sia -d backend/swift -d backend/webdav -d cmd/selfupdate -d cmd/serve/docker -d fs/rc/webgui
+%gocheck -d backend/combine -d backend/compress -d backend/crypt -d backend/ftp -d backend/hdfs -d backend/seafile -d backend/sftp -d backend/sia -d backend/swift -d backend/webdav -d cmd/selfupdate -d cmd/serve/docker -d fs/rc/webgui
 %endif
 
 %files
