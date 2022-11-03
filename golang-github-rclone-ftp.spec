@@ -26,7 +26,7 @@ FTP client package for Go.}
 
 Name:           %{goname}
 Version:        0
-Release:        %autorelease -p
+Release:        %autorelease -p -b 10
 Summary:        FTP client package for Go
 
 License:        ISC
