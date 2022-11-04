@@ -28,6 +28,10 @@ Source:         %{gosource}
 %prep
 %goprep
 
+# We remove dependencies to "github.com/anacrolix/ffprobe"
+# which depends on ffmpeg
+rm -rf dlna/dms play transcode
+
 %generate_buildrequires
 %go_generate_buildrequires
 
