@@ -69,6 +69,7 @@ done
          -d backend/sftp \
          -d backend/sia \
          -d backend/swift \
+         -d backend/union \
          -d backend/webdav \
          -d cmd/mount \
          -d cmd/mount2 \
