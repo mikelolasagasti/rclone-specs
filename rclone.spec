@@ -3,7 +3,7 @@
 
 # https://github.com/rclone/rclone
 %global goipath         github.com/rclone/rclone
-Version:                1.60.1
+Version:                1.62.2
 
 %gometa -f
 
