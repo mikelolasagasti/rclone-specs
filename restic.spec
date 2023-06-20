@@ -35,6 +35,8 @@ Summary:        Fast, secure, efficient backup program
 License:        BSD-2-Clause
 URL:            %{gourl}
 Source:         %{gosource}
+# https://github.com/restic/restic/pull/4201
+Patch:          https://github.com/restic/restic/commit/faa83db9e477324baf90f965c771e92c0d8d76de.patch
 
 %description %{common_description}
 
