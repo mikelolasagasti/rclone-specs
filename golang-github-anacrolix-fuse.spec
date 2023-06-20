@@ -11,15 +11,14 @@ Version:                0.2.0
 
 
 %global common_description %{expand:
-Bazil.org/fuse - With macOS support and its own import path so replace
-directives aren't necessary.}
+Bazil.org/fuse fork with macOS support.}
 
 %global golicenses      LICENSE
 %global godocs          examples doc README.md
 
 Name:           %{goname}
 Release:        %autorelease
-Summary:        Bazil.org/fuse - With macOS support and its own import path so replace directives aren't necessary
+Summary:        Bazil.org/fuse fork with macOS support
 
 License:        BSD and MIT
 URL:            %{gourl}
