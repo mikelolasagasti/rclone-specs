@@ -1,0 +1,31 @@
+From faa83db9e477324baf90f965c771e92c0d8d76de Mon Sep 17 00:00:00 2001
+From: Michael Eischer <michael.eischer@fau.de>
+Date: Fri, 7 Apr 2023 15:05:55 +0200
+Subject: [PATCH] azure: Adapt code to API change
+
+---
+ internal/backend/azure/azure.go | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/internal/backend/azure/azure.go b/internal/backend/azure/azure.go
+index 02433795b59..c92fa3f8940 100644
+--- a/internal/backend/azure/azure.go
++++ b/internal/backend/azure/azure.go
+@@ -228,7 +228,7 @@ func (be *Backend) saveSmall(ctx context.Context, objName string, rd restic.Rewi
+ 
+ 	reader := bytes.NewReader(buf)
+ 	_, err = blockBlobClient.StageBlock(ctx, id, streaming.NopCloser(reader), &blockblob.StageBlockOptions{
+-		TransactionalContentMD5: rd.Hash(),
++		TransactionalValidation: blob.TransferValidationTypeMD5(rd.Hash()),
+ 	})
+ 	if err != nil {
+ 		return errors.Wrap(err, "StageBlock")
+@@ -271,7 +271,7 @@ func (be *Backend) saveLarge(ctx context.Context, objName string, rd restic.Rewi
+ 		reader := bytes.NewReader(buf)
+ 		debug.Log("StageBlock %v with %d bytes", id, len(buf))
+ 		_, err = blockBlobClient.StageBlock(ctx, id, streaming.NopCloser(reader), &blockblob.StageBlockOptions{
+-			TransactionalContentMD5: h[:],
++			TransactionalValidation: blob.TransferValidationTypeMD5(h[:]),
+ 		})
+ 
+ 		if err != nil {
