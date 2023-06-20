@@ -46,6 +46,9 @@ Patch:          https://github.com/restic/restic/commit/faa83db9e477324baf90f965
 %goprep
 %autopatch -p1
 
+# Use original bazil.org/fuse library as we don't need MacOS support
+sed -i "s|github.com/anacrolix/fuse|bazil.org/fuse|" $(find . -name "*.go" -type f)
+
 %generate_buildrequires
 %go_generate_buildrequires
 
