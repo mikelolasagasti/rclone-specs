@@ -5,6 +5,7 @@
 # https://github.com/quic-go/qtls-go1-20
 %global goipath         github.com/quic-go/qtls-go1-20
 Version:                0.3.0
+%global commit          a42b12e32a6d262713531dffeac718b5aa06ed62
 
 %gometa -f
 
