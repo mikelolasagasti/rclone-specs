@@ -4,7 +4,8 @@
 
 # https://github.com/quic-go/quic-go
 %global goipath         github.com/quic-go/quic-go
-Version:                0.32.0
+Version:                0.36.0
+%global commit          3d89e545d3f7da8e929b44d45bd0545b868849a2
 
 %gometa -f
 
