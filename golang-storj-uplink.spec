@@ -32,6 +32,8 @@ Source:         %{gosource}
 %goprep
 %autopatch -p1
 
+rm -rf testsuite
+
 %generate_buildrequires
 %go_generate_buildrequires
 
