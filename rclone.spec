@@ -39,9 +39,9 @@ sed -i "s|github.com/putdotio/go-putio/putio|github.com/putdotio/go-putio|" $(fi
 export LDFLAGS="-X github.com/rclone/rclone/fs.Version=%{version}"
 %gobuild -o %{gobuilddir}/bin/rclone %{goipath}
 
-%{gobuilddir}/bin/%{name} completion bash > %{name}.bash
-%{gobuilddir}/bin/%{name} completion fish > %{name}.fish
-%{gobuilddir}/bin/%{name} completion zsh  > %{name}.zsh
+%{gobuilddir}/bin/%{name} completion bash - > %{name}.bash
+%{gobuilddir}/bin/%{name} completion fish - > %{name}.fish
+%{gobuilddir}/bin/%{name} completion zsh  - > %{name}.zsh
 
 
 %install
