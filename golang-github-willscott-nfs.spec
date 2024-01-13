@@ -9,9 +9,9 @@ Version:                0.0.2
 %gometa -L -f
 
 # For some reason doesn't pull this dep
-%global godevelheader %{expand:
-BuildRequires:  golang(github.com/willscott/go-nfs-client/nfs)
-}
+#%%global godevelheader %%{expand:
+#
+#}
 
 %global common_description %{expand:
 Golang NFSv3 server.}
@@ -26,6 +26,8 @@ Summary:        Golang NFSv3 server
 License:        Apache-2.0
 URL:            %{gourl}
 Source:         %{gosource}
+
+BuildRequires:  golang-github-willscott-nfs-client-devel
 
 %description %{common_description}
 
