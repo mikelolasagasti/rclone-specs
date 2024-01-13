@@ -31,6 +31,9 @@ Source:         %{gosource}
 %goprep
 %autopatch -p1
 
+#avoid extra deps
+rm -rf example
+
 %generate_buildrequires
 %go_generate_buildrequires
 
