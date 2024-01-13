@@ -4,7 +4,7 @@
 
 # https://github.com/willscott/go-nfs-client
 %global goipath         github.com/willscott/go-nfs-client
-%global commit          b44639837b00f2469a749c154f514524d7397ab7
+%global commit          271fa9065b3377f1124f3ce74f957d8a2dd3ab0c
 
 %gometa -L -f
 
