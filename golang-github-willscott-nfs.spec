@@ -4,7 +4,6 @@
 
 # https://github.com/willscott/go-nfs
 %global goipath         github.com/willscott/go-nfs
-Version:                0.0.1
 %global commit          e6abde417d5dcd6390ba2d6d08a3cc40e6c64697
 
 %gometa -L -f
@@ -17,7 +16,8 @@ Golang NFSv3 server.}
 %global godocs          example README.md
 
 Name:           golang-github-willscott-nfs
-Release:        %autorelease
+Version:        0
+Release:        %autorelease -p
 Summary:        Golang NFSv3 server
 
 License:        Apache-2.0
