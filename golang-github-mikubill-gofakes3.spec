@@ -5,6 +5,7 @@
 # https://github.com/Mikubill/gofakes3
 %global goipath         github.com/Mikubill/gofakes3
 Version:                0.0.2
+%global commit          284c0f988700cedc9a4c4f9dbfedf56351c52ef5
 
 %gometa -L -f
 
