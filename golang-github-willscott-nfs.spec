@@ -23,6 +23,8 @@ License:        Apache-2.0
 URL:            %{gourl}
 Source:         %{gosource}
 
+BuildRequires:  golang(github.com/willscott/go-nfs-client/nfs)
+
 %description %{common_description}
 
 %gopkg
