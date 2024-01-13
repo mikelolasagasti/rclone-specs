@@ -24,7 +24,7 @@ License:        Apache-2.0
 URL:            %{gourl}
 Source:         %{gosource}
 
-#BuildRequires:  golang-github-willscott-nfs-client-devel
+BuildRequires:  golang-github-willscott-nfs-client-devel
 
 %description %{common_description}
 
