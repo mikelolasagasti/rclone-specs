@@ -4,7 +4,7 @@
 %global debug_package %{nil}
 
 # https://github.com/Azure/azure-sdk-for-go
-%global goipath         github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/internal
+%global goipath         github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/internal/v2
 Version:                2.0.0
 %global tag             sdk/resourcemanager/internal/v2.0.0
 %global distprefix      %{nil}
