@@ -5,8 +5,8 @@
 
 # https://github.com/Azure/azure-sdk-for-go
 %global goipath         github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/storage/armstorage
-Version:                1.2.0
-%global tag             sdk/resourcemanager/storage/armstorage/v1.2.0
+Version:                1.5.0
+%global tag             sdk/resourcemanager/storage/armstorage/v1.5.0
 %global distprefix      %{nil}
 
 %gometa -f
