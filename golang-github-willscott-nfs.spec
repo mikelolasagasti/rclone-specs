@@ -4,20 +4,17 @@
 
 # https://github.com/willscott/go-nfs
 %global goipath         github.com/willscott/go-nfs
-Version:                0.0.2
+Version:                0.0.1
+%global commit          e6abde417d5dcd6390ba2d6d08a3cc40e6c64697
 
 %gometa -L -f
 
-# For some reason doesn't pull this dep
-#%%global godevelheader %%{expand:
-#
-#}
 
 %global common_description %{expand:
 Golang NFSv3 server.}
 
 %global golicenses      LICENSE
-%global godocs          example CONTRIBUTING.md README.md SECURITY.md
+%global godocs          example README.md
 
 Name:           golang-github-willscott-nfs
 Release:        %autorelease
@@ -27,7 +24,7 @@ License:        Apache-2.0
 URL:            %{gourl}
 Source:         %{gosource}
 
-BuildRequires:  golang-github-willscott-nfs-client-devel
+#BuildRequires:  golang-github-willscott-nfs-client-devel
 
 %description %{common_description}
 
