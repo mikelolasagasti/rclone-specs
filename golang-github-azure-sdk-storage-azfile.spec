@@ -5,14 +5,14 @@
 
 # https://github.com/Azure/azure-sdk-for-go
 %global goipath         github.com/Azure/azure-sdk-for-go/sdk/storage/azfile
-Version:                1.1.1
-%global tag             sdk/storage/azfile/v1.1.1
+Version:                1.1.0
+%global tag             sdk/storage/azfile/v1.1.0
 %global distprefix      %{nil}
 
 %gometa -f
 
 %global common_description %{expand:
-Azure SDK for Go - azblob library.}
+Azure SDK for Go - azfile library.}
 
 %global golicenses      NOTICE.txt LICENSE.txt sdk/storage/azblob/LICENSE.txt
 %global godocs          CODE_OF_CONDUCT.md CONTRIBUTING.md SUPPORT.md\\\
@@ -21,7 +21,7 @@ Azure SDK for Go - azblob library.}
 
 Name:           %{goname}
 Release:        %autorelease
-Summary:        Azure SDK for Go - azblob library
+Summary:        Azure SDK for Go - azfile library
 
 License:        MIT
 URL:            %{gourl}
