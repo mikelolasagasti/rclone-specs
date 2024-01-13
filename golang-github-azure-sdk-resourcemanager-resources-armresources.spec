@@ -5,8 +5,8 @@
 
 # https://github.com/Azure/azure-sdk-for-go
 %global goipath         github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/resources/armresources
-Version:                1.1.1
-%global tag             sdk/resourcemanager/resources/armresources/v1.1.1
+Version:                1.2.0
+%global tag             sdk/resourcemanager/resources/armresources/v1.2.0
 %global distprefix      %{nil}
 
 %gometa -f
