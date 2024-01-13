@@ -36,7 +36,7 @@ Source:         %{gosource}
 %autopatch -p1
 
 # move building library to the root to match goipath
-mv sdk/internal/* .
+mv sdk/resourcemanager/internal/* .
 rm -rf .github documentation eng profile sdk
 
 %generate_buildrequires
