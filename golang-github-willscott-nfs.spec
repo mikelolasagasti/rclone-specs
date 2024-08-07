@@ -13,6 +13,9 @@ Version:                0.0.2
 
 %gometa -L -f
 
+%global godevelheader %{expand:
+Requires: golang(github.com/willscott/go-nfs-client/nfs)}
+
 %global common_description %{expand:
 Golang NFSv3 server.}
 
