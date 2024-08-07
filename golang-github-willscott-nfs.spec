@@ -27,6 +27,7 @@ License:        Apache-2.0
 URL:            %{gourl}
 Source:         %{gosource}
 
+# https://pagure.io/golist/issue/34
 BuildRequires:  golang(github.com/willscott/go-nfs-client/nfs)
 
 %description %{common_description}
